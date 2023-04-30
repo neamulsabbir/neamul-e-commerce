@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../Images/logo.png";
 import BottomNav from "./BottomNav";
 import { FaHome } from "react-icons/fa";
+import { cartSideBar } from "../../../State/ActionCreator/ActionCreator";
+import { useDispatch } from "react-redux";
 
 const Navbar = () => {
+  const [sidebarToggle, setSidebarToggle] = useState(false)
+  const dispatch = useDispatch()
   return (
     <div className="sticky top-0 z-20">
       <div className="flex justify-between items-center px-7 md:px-20 py-5 bg-white ">
-        <div className="flex items-center mr-10">
+        <div className="flex items-center mr-5 sm:mr-10">
           <Link to='/'>
             <img className="w-full" src={logo} alt="" />
-            
           </Link>
         </div>
         <div className="w-full">
@@ -40,7 +43,7 @@ const Navbar = () => {
                 ></path>
               </svg>
             </Link>
-            <Link to="/cart" className="mr-8">
+            <div onClick={() => dispatch(cartSideBar(setSidebarToggle))} className="mr-8">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -52,7 +55,7 @@ const Navbar = () => {
                   fill="#000"
                 ></path>
               </svg>
-            </Link>
+            </div>
             <Link to="signin" className="flex">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -65,6 +68,7 @@ const Navbar = () => {
               </svg>
               <h1>SignIn</h1>
             </Link>
+            <Link to='/ecart'>ECArt</Link>
           </div>
         </div>
       </div>

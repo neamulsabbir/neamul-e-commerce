@@ -1,4 +1,4 @@
-import { ADD_TO_CART, ADD_WISH_LIST, GET_CATEGORIES_PRODUCT, GET_PRODUCT, GET_PRODUCT_DETAIL, REMOVE_FROM_CART } from "../ActionTypes/ActionTypes"
+import { ADD_TO_CART, ADD_WISH_LIST, CART_SIDE_BAR, DELETE_PRODUCT_FROM_CART, GET_CATEGORIES_PRODUCT, GET_PRODUCT, GET_PRODUCT_DETAIL, REMOVE_FROM_CART } from "../ActionTypes/ActionTypes"
 
 export const getProduct = data => {
     return{
@@ -34,9 +34,23 @@ export const removeFromCart = data => {
     }
 }
 
+export const deleteFromCart = data => {
+    return{
+        type: DELETE_PRODUCT_FROM_CART,
+        payload: data
+    }
+}
+
 export const addToWishList = data => {
     return{
         type: ADD_WISH_LIST,
+        payload: data
+    }
+}
+
+export const cartSideBar = data => {
+    return{
+        type: CART_SIDE_BAR,
         payload: data
     }
 }

@@ -5,10 +5,21 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
 
-import banner2 from '../../../../Images/banner2.jpg'
-import banner1 from '../../../../Images/banner1.jpg'
+import banner2 from "../../../../Images/banner2.jpg";
+import banner1 from "../../../../Images/banner1.jpg";
 
 const Banner = () => {
+  const banners = [
+    {
+      id: 1,
+      img: banner1,
+    },
+    {
+      id: 2,
+      img: banner2,
+    },
+  ];
+
   return (
     <>
       <Swiper
@@ -25,18 +36,15 @@ const Banner = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        
-        <SwiperSlide>
-          
-          <img className="rounded-b-md" src={banner2} alt=""/>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="rounded-b-md" src={banner1} alt=""/>
-        </SwiperSlide>
+        <div className="w-11/12 mx-auto">
+          {banners.map((banner) => (
+            <SwiperSlide>
+              <img src={banner?.img} alt="" />
+            </SwiperSlide>
+          ))}
+        </div>
       </Swiper>
     </>
-      
-    
   );
 };
 

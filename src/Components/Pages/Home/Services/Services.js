@@ -5,7 +5,7 @@ import return_icon from "../../../../Images/return_icon.svg";
 
 const Services = () => {
   return (
-    <div className="px-20 mx-auto my-14">
+    <div className="px-6 sm:px-20 mx-auto my-14">
       <div className="flex justify-around">
         <div className="flex flex-col items-center">
           <img className="w-12" src={cashon} alt="" />

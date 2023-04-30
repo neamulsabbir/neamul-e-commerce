@@ -1,4 +1,4 @@
-import { ADD_TO_CART, ADD_WISH_LIST } from "../ActionTypes/ActionTypes"
+import { ADD_TO_CART, ADD_WISH_LIST, DELETE_PRODUCT_FROM_CART, REMOVE_FROM_CART } from "../ActionTypes/ActionTypes"
 
 const initialState = {
     cart:[],
@@ -6,9 +6,8 @@ const initialState = {
 }
 export const productCartReducer = (state = initialState, action) => {
 
-    // console.log(action.payload);
-    const selectedProduct = state.cart.find(pd => pd.slug === action.payload.slug)
-    // const selectedwishList = state.wishlist.find(pd => pd.slug === action.payload.slug)
+    console.log(action.payload);
+    const selectedProduct = state.cart.find(pd => pd.slug.toLowerCase() === action.payload.slug.toLowerCase())
     console.log(selectedProduct);
 
     switch(action.type){
@@ -28,17 +27,26 @@ export const productCartReducer = (state = initialState, action) => {
                 cart: [...state.cart, {...action.payload, quantity :1}]
             }
 
-        case ADD_WISH_LIST:
-            // if(selectedwishList){
-            //     return{
-            //         ...state,
-            //         wishlist: action.payload
-            //     }
-            // }
+        case REMOVE_FROM_CART:
+            if(selectedProduct.quantity > 1){
+                const newProduct = state.cart.filter(pd => pd.slug !== selectedProduct.slug)
+                selectedProduct.quantity = selectedProduct.quantity - 1
+                return{
+                    ...state,
+                    cart: [...newProduct, selectedProduct]
+                }
+            }
+            
             return{
                 ...state,
-                wishlist: [...state.wishlist, {...action.payload, wishlist: true}]
+                cart: state.cart.filter(pd => pd.slug !== action.payload.slug)
             }
+        
+            case DELETE_PRODUCT_FROM_CART:
+                return{
+                    ...state,
+                    cart: state.cart.filter(pd => pd.slug !== action.payload.slug)
+                }
 
         default:
             return state

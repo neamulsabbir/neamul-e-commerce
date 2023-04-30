@@ -21,7 +21,7 @@ const Categories = () => {
   }, []);
   
   return (
-    <div className="w-11/12 mx-auto py-20">
+    <div className="w-11/12 mx-auto py-12 lg:py-20">
       <div className="lg:flex lg:justify-between">
         <FilterCategoryProduct></FilterCategoryProduct>
         <div 

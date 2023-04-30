@@ -4,19 +4,19 @@ import { useDispatch, useSelector } from "react-redux";
 
 const AddToCartAndWishlist = () => {
 
-  const product = useSelector(state => state.productDetails.product)
+  const products = useSelector(state => state.productDetails.product)
   const dispatch = useDispatch()
 
   return (
-    <div className="pt-4 flex items-center">
+    <div className="pt-6 flex items-center">
     <button
-      onClick={() => dispatch(addToCart(product))}
-      className="font-semibold text-white bg-black px-5 py-2 rounded-full"
+      onClick={() => dispatch(addToCart(products))}
+      className="font-semibold text-white text-sm bg-black px-5 py-2 rounded-full animate-bounce"
     >
       ADD TO CART
     </button>
     <div
-      onClick={() => dispatch(addToWishList(product))} 
+      onClick={() => dispatch(addToWishList(products))} 
       className="ml-4">
       <svg
         xmlns="http://www.w3.org/2000/svg"

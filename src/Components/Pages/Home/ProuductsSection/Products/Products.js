@@ -12,7 +12,7 @@ const Products = () => {
         dispatch(getProductData())
     },[])
     return (
-        <div className='px-20 mx-auto '>
+        <div className='px-6 md:px-20 mx-auto '>
             {
                 products.map(product => <Product pd={product}></Product>)
             }

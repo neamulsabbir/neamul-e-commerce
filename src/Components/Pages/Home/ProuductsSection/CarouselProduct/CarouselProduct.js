@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const RightSidePd = ({ pd }) => {
+const CarouselProduct = ({ pd }) => {
   return (
     <Link to={`/product/${pd?.slug}`}>
       <div className="">
@@ -37,4 +37,4 @@ const RightSidePd = ({ pd }) => {
   );
 };
 
-export default RightSidePd;
+export default CarouselProduct;
