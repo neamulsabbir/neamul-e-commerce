@@ -14,7 +14,7 @@ const SignIn = () => {
       >
         <form>
           <div className="flex flex-col items-center">
-            <img className="w-16 mb-5" src={logo} alt="" />
+            <img className="w-36 mb-5" src={logo} alt="" />
             <div className="text-center">
               <h1 className="text-xl font-bold">Sign In Now</h1>
               <p className="mb-5">Please fill the details and create account</p>

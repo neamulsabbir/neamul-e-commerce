@@ -14,12 +14,12 @@ const ProductQuantity = ({products}) => {
   }
 
   return (
-    <div className="mt-4 w-28">
+    <div className="mt-4">
       <h1 className="text-base">Quantity:</h1>
-      <div className="flex items-center mt-2 border-b-2 border-gray-300">
-        <button onClick={() => dispatch(removeFromCart(cart))} className="border-r-2 border-gray-300 px-3">-</button>
-          <p className="px-3 border-r-2 border-gray-300">{products?.quantity ? products?.quantity : 0}</p>
-        <button onClick={() => dispatch(addToCart(cart))} className="px-3">+</button>
+        <div className="flex items-center mt-2">
+          <button onClick={() => dispatch(removeFromCart(cart))} className="border-r-2 border-b-2 border-gray-300 px-3">-</button>
+            <p className="px-3 border-r-2 border-b-2 border-gray-300">{products?.quantity ? products?.quantity : 0}</p>
+          <button onClick={() => dispatch(addToCart(cart))} className="px-3 border-b-2">+</button>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import { addToCart, addToWishList } from "../../../../../../State/ActionCreator/ActionCreator";
 import { useDispatch, useSelector } from "react-redux";
 
-const AddToCartAndWishlist = () => {
+const AddToCartAndWishlist = ({product}) => {
 
   const products = useSelector(state => state.productDetails.product)
   const dispatch = useDispatch()
@@ -11,7 +11,7 @@ const AddToCartAndWishlist = () => {
     <div className="pt-6 flex items-center">
     <button
       onClick={() => dispatch(addToCart(products))}
-      className="font-semibold text-white text-sm bg-black px-5 py-2 rounded-full animate-bounce"
+      className= {`font-semibold text-white text-sm bg-black px-5 py-2 rounded-full ${!product?.quantity ? "animate-bounce" : null} `}
     >
       ADD TO CART
     </button>

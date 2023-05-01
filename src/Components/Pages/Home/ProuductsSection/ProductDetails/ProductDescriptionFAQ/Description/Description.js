@@ -1,10 +1,9 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-const ProductDescription = ({toggle}) => {
-    
+const Description = ({ toggle }) => {
   const products = useSelector((state) => state.productDetails.product);
-
+  
   return (
     <div className={toggle === 1 ? "block" : "hidden"}>
       <h1 className="text-lg font-bold">Product Details:</h1>
@@ -17,4 +16,4 @@ const ProductDescription = ({toggle}) => {
   );
 };
 
-export default ProductDescription;
+export default Description;

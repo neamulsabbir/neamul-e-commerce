@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { getCategoriesProductData } from "../../../../../../State/Thunk/getCategoriesProductData";
+import banner from '../../../../../../Images/banner3.png'
 import Category from "../Category/Category";
 import FilterCategoryProduct from "../FilterCategoryProduct/FilterCategoryProduct";
-import { getCategoriesProductData } from "../../../../../../State/Thunk/getCategoriesProductData";
 
 const Categories = () => {
   const { name } = useParams();
@@ -21,8 +22,9 @@ const Categories = () => {
   }, []);
   
   return (
-    <div className="w-11/12 mx-auto py-12 lg:py-20">
-      <div className="lg:flex lg:justify-between">
+    <div className="">
+      <img className="w-full" src={banner} alt=""/>
+      <div className="w-11/12 mx-auto my-12 lg:my-20 lg:flex lg:justify-between">
         <FilterCategoryProduct></FilterCategoryProduct>
         <div 
           className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-7 lg:ml-16">

@@ -11,7 +11,6 @@ const ECart = () => {
 
   const dispatch = useDispatch()
   const cartItems = useSelector((state) => state.cart.cart);
-  const sidebarToggle = useSelector(state => state.sidebar.toggle)
   // console.log(cartItems);
   return (
     <div>

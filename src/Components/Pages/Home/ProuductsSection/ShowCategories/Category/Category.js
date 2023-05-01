@@ -5,7 +5,9 @@ const Category = ({ pd }) => {
   // console.log(pd)
   return (
     <Link className="" to={`/product/${pd?.slug}`}>
-      <div className=" p-2 rounded-md border-t-2 border-gray-200 shadow-md bg-white">
+      <div style={{
+        boxShadow: "rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px"
+      }} className=" p-2 rounded-md bg-white">
         <img src={pd?.image} className="w-full" alt="" />
         <div className="mt-2">
           <h1 className="h-12">{pd?.title}</h1>

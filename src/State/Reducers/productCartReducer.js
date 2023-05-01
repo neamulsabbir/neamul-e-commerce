@@ -6,9 +6,10 @@ const initialState = {
 }
 export const productCartReducer = (state = initialState, action) => {
 
-    console.log(action.payload);
-    const selectedProduct = state.cart.find(pd => pd.slug.toLowerCase() === action.payload.slug.toLowerCase())
-    console.log(selectedProduct);
+    // console.log(action.payload);
+    const selectedProduct = state.cart.find(pd => pd.slug === action.payload.slug)
+    const selectedWishlist = state.wishlist.find(pd => pd.slug === action.payload.slug)
+    // console.log(selectedProduct);
 
     switch(action.type){
 
@@ -42,11 +43,16 @@ export const productCartReducer = (state = initialState, action) => {
                 cart: state.cart.filter(pd => pd.slug !== action.payload.slug)
             }
         
-            case DELETE_PRODUCT_FROM_CART:
-                return{
-                    ...state,
-                    cart: state.cart.filter(pd => pd.slug !== action.payload.slug)
-                }
+        case ADD_WISH_LIST:
+            return {
+                ...state,
+                wishlist: action.payload
+            }
+            // case DELETE_PRODUCT_FROM_CART:
+            //     return{
+            //         ...state,
+            //         cart: state.cart.filter(pd => pd.slug !== action.payload.slug)
+            //     }
 
         default:
             return state

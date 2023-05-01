@@ -7,14 +7,13 @@ import ProductQuantity from "./ProductQuantity/ProductQuantity";
 import AddToCartAndWishlist from "./AddToCartAndWishlist/AddToCartAndWishlist";
 import { getProductDetailsData } from "../../../../../State/Thunk/getProductDetails";
 import ProductWarranty from "./ProductWarranty/ProductWarranty";
-import ProductDescription from "./ProductDescription/ProductDescription";
-import ProductsFaqs from "./ProductsFaqs/ProductsFaqs";
+import ProductDescription from "./ProductDescriptionFAQ/ProductDescription";
 
 const ProductDetails = () => {
   const { slug } = useParams();
 
   const [currentItem, setCurrentItem] = useState({});
-  const [toggle, setToggle] = useState(1);
+  
 
   const cartItems = useSelector((state) => state.cart.cart);
   const products = useSelector((state) => state.productDetails.product);
@@ -26,7 +25,7 @@ const ProductDetails = () => {
     dispatch(getProductDetailsData(slug));
     setCurrentItem(
       cartItems.find(
-        (item) => item.slug.toLowerCase() === slug.toLowerCase()
+        (item) => item.slug === slug
       )
     );
   }, [slug, cartItems]);
@@ -37,7 +36,7 @@ const ProductDetails = () => {
         <div className="border border-gray-200 rounded-md">
           <img className="w-80 mx-auto" src={products?.image} alt="" />
         </div>
-        <div className="md:ml-20 mt-10 md:mt-0 w-full overflow-hidden	">
+        <div className="md:ml-20 mt-10 md:mt-0 overflow-hidden	">
           <div className="">
             <h1 className="text-3xl font-semibold">{products?.title}</h1>
             <RatingsAndSocialIcon></RatingsAndSocialIcon>
@@ -46,39 +45,11 @@ const ProductDetails = () => {
             <ProductPrice></ProductPrice>
           </div>
           <ProductQuantity products={currentItem}></ProductQuantity>
-          <AddToCartAndWishlist></AddToCartAndWishlist>
+          <AddToCartAndWishlist product={currentItem}></AddToCartAndWishlist>
           <ProductWarranty></ProductWarranty>
         </div>
       </div>
-      <div className="bg-white rounded-md border-t-2 border-gray-200 shadow-md p-4 sm:p-10 my-10">
-        <div className="border-2 border-gray-200 rounded-md p-4 sm:p-10">
-          <div className="flex">
-            <div className="flex flex-col items-center">
-              <h1 className="text-lg font-bold cursor-pointer" onClick={() => setToggle(1)}>
-                DESCRIPTIONS
-              </h1>
-              <div
-                className={
-                  toggle === 1 ? "border-b-4 border-b-black w-36 rounded-t-xl" : "w-36"
-                }
-              ></div>
-            </div>
-            <div className="flex flex-col items-center ml-5">
-              <h1 className="text-lg font-bold cursor-pointer" onClick={() => setToggle(2)}>
-                FAQS
-              </h1>
-              <div
-                className={toggle === 2 ? "border-b-4 border-b-black w-14 rounded-t-xl" : "w-14"}
-              ></div>
-            </div>
-          </div>
-          <hr className="" />
-          <div className="my-10">
-            <ProductDescription toggle={toggle}></ProductDescription>
-            <ProductsFaqs toggle={toggle}></ProductsFaqs>
-          </div>
-        </div>
-      </div>
+      <ProductDescription></ProductDescription>
     </div>
   );
 };
