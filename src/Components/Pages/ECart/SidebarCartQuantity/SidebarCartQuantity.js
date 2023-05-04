@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { addToCart, removeFromCart } from '../../../../State/ActionCreator/ActionCreator';
 
-const ECartQuantity = ({cart}) => {
+const SidebarCartQuantity = ({cart}) => {
     const dispatch = useDispatch()
   
     return (
@@ -18,4 +18,4 @@ const ECartQuantity = ({cart}) => {
   };
   
 
-export default ECartQuantity;
+export default SidebarCartQuantity;

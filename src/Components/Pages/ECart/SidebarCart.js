@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { FaTrash } from "react-icons/fa";
-import ECartPrice from "./ECartPrice/ECartPrice";
-import ECartQuantity from "./ECartQuantity/ECartQuantity";
+import SidebarCartPrice from "./SidebarCartPrice/SidebarCartPrice";
+import SidebarCartQuantity from "./SidebarCartQuantity/SidebarCartQuantity";
 import SubTotal from "./SubTotal/SubTotal";
 import { deleteFromCart } from "../../../State/ActionCreator/ActionCreator";
 import { Link } from "react-router-dom";
 
-const ECart = () => {
+const SidebarCart = () => {
 
   const dispatch = useDispatch()
   const isOpen = useSelector(state => state.sidebar.isOpen)
@@ -22,8 +22,8 @@ const ECart = () => {
             <img className="w-28 border border-gray-300 " src={cart?.image} alt=""/>
             <div className="ml-10">
               <h1 className="text-lg w-72 font-semibold">{cart?.title}</h1>
-              <ECartPrice cart={cart}></ECartPrice>
-              <ECartQuantity cart={cart}></ECartQuantity>
+              <SidebarCartPrice cart={cart}></SidebarCartPrice>
+              <SidebarCartQuantity cart={cart}></SidebarCartQuantity>
             </div>
             {/* <FaTrash onClick={dispatch(deleteFromCart(cart))}></FaTrash> */}
           </div>
@@ -49,4 +49,4 @@ const ECart = () => {
   );
 };
 
-export default ECart;
+export default SidebarCart;

@@ -1,6 +1,6 @@
 import React from "react";
 
-const ECartPrice = ({ cart }) => {
+const SidebarCartPrice = ({ cart }) => {
   // console.log(cart);
 
   return (
@@ -30,4 +30,4 @@ const ECartPrice = ({ cart }) => {
   );
 };
 
-export default ECartPrice;
+export default SidebarCartPrice;

@@ -4,18 +4,18 @@ import WishlistPrice from "../WishlistPrice/WishlistPrice";
 import { addToCart } from "../../../../State/ActionCreator/ActionCreator";
 
 const WishlistModal = () => {
-  
+
   const dispatch = useDispatch();
   const wishlistProducts = useSelector((state) => state.cart.wishlist);
   const products = useSelector((state) => state.productDetails.product);
 
   return (
     <div>
-      <input type="checkbox" id="my-modal-3" className="modal-toggle" />
+      <input type="checkbox" id="wishlist-product" className="modal-toggle" />
       <div className="modal">
         <div className="modal-box relative">
           <label
-            htmlFor="my-modal-3"
+            htmlFor="wishlist-product"
             className="btn btn-sm btn-circle bg-black absolute right-2 top-2"
           >
             ✕

@@ -2,9 +2,9 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import banner from "../../../Images/banner3.png";
-import ECartPrice from "../ECart/ECartPrice/ECartPrice";
-import ECartQuantity from "../ECart/ECartQuantity/ECartQuantity";
 import CartTotal from "./CartTotal/CartTotal";
+import SidebarCartPrice from "../ECart/SidebarCartPrice/SidebarCartPrice";
+import SidebarCartQuantity from "../ECart/SidebarCartQuantity/SidebarCartQuantity";
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cart);
@@ -27,8 +27,8 @@ const Cart = () => {
                 <h1 className="text-lg font-semibold w-full h-12">
                   {cart?.title}
                 </h1>
-                <ECartPrice cart={cart}></ECartPrice>
-                <ECartQuantity cart={cart}></ECartQuantity>
+                <SidebarCartPrice cart={cart}></SidebarCartPrice>
+                <SidebarCartQuantity cart={cart}></SidebarCartQuantity>
               </div>
             </div>
           ))}

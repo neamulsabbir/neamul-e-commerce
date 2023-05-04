@@ -1,9 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 import CheckOutTotal from "./CheckOutTotal/CheckOutTotal";
-import ECartPrice from "../../Pages/ECart/ECartPrice/ECartPrice";
-import ECartQuantity from "../../Pages/ECart/ECartQuantity/ECartQuantity";
+import SidebarCartPrice from "../../Pages/ECart/SidebarCartPrice/SidebarCartPrice";
+import SidebarCartQuantity from "../../Pages/ECart/SidebarCartQuantity/SidebarCartQuantity";
 
 const OrderDetails = () => {
   const cartItems = useSelector((state) => state.cart.cart);
@@ -20,8 +19,8 @@ const OrderDetails = () => {
           <img className="W-20 border border-gray-300 " src={cart?.image} alt="" />
           <div className="ml-5 xl:ml-0">
             <h1 className="text-lg font-semibold w-full h-12">{cart?.title}</h1>
-            <ECartPrice cart={cart}></ECartPrice>
-            <ECartQuantity cart={cart}></ECartQuantity>
+            <SidebarCartPrice cart={cart}></SidebarCartPrice>
+            <SidebarCartQuantity cart={cart}></SidebarCartQuantity>
           </div>
         </div>
       ))}
