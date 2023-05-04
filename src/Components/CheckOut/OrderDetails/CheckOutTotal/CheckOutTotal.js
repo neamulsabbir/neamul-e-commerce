@@ -5,12 +5,12 @@ const CheckOutTotal = () => {
   const carts = useSelector((state) => state.cart.cart);
 
   let cart;
-  let price;
+  let price =0 ;
   let vat;
   let total;
   for (const cartItems of carts) {
     cart = cartItems;
-    price  = cart?.price * cart?.quantity;
+    price  = price + (cart?.price * cart?.quantity);
     vat = parseFloat((10 / 100) * price);   
     total = parseFloat(price + vat + 80).toFixed(2);
   }

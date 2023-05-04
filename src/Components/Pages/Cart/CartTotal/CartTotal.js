@@ -6,13 +6,13 @@ const CartTotal = () => {
   const carts = useSelector((state) => state.cart.cart);
 
   let cart;
-  let subTotal = 0;
+  let subTotal =0 ;
   let vat;
-  let total = 0;
+  let total;
   for (const cartItems of carts) {
     cart = cartItems;
-    subTotal = (subTotal + cartItems.price) * cartItems.quantity;
-    vat = parseFloat((10 / 100) * subTotal);
+    subTotal  = subTotal + (cart?.price * cart?.quantity);
+    vat = parseFloat((10 / 100) * subTotal);   
     total = parseFloat(subTotal + vat + 80).toFixed(2);
   }
 

@@ -1,10 +1,25 @@
 import React from "react";
 import { FaHome } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { closeSidebar, openSidebar } from "../../../State/ActionCreator/ActionCreator";
+import ECart from "../../Pages/ECart/ECart";
 
 const BottomNavbar = () => {
+  const isOpen = useSelector(state => state.sidebar.isOpen)
+  const dispatch = useDispatch()
+
+  const handleSidebar = () => {
+    if(isOpen){
+      dispatch(closeSidebar())
+    }
+    else{
+      dispatch(openSidebar())
+    }
+  }
+
   return (
-    <div className="sticky bottom-0 bg-white block lg:hidden ">
+    <div className="sticky bottom-0 bg-white block md:hidden ">
       <div 
         style={{boxShadow: "rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px"}} 
         className="flex justify-between items-center px-6 mx-auto py-4 ">
@@ -21,8 +36,8 @@ const BottomNavbar = () => {
             <h1 className="text-sm font-semibold">Wishlist</h1>
           </Link>
         </div>
-        <div>
-          <Link to="/cart" className="flex flex-col items-center">
+        <div onClick={handleSidebar}>
+          <Link className="flex flex-col items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -34,6 +49,7 @@ const BottomNavbar = () => {
             </svg>
             <h1 className="text-sm font-semibold">Cart</h1>
           </Link>
+          <ECart></ECart>
         </div>
         <div>
           <Link to="signin" className="flex flex-col items-center">

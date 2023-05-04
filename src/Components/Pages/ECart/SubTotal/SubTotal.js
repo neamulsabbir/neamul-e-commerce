@@ -8,7 +8,7 @@ const SubTotal = () => {
     let total = 0;
     for(const cartItems of carts){
         cart = cartItems
-        total = (total + cartItems.price) * cartItems.quantity
+        total = total + (cartItems.price * cartItems.quantity)
     }
 
     return (

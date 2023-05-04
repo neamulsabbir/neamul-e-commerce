@@ -44,10 +44,10 @@ export const routes = createBrowserRouter([
                 path: "/product/:slug",
                 element: <ProductDetails></ProductDetails>
             },
-            {
-                path: "/ecart",
-                element: <ECart></ECart>
-            },
+            // {
+            //     path: "/ecart",
+            //     element: <ECart></ECart>
+            // },
             {
                 path: '/checkout',
                 element: <CheckOut></CheckOut>
