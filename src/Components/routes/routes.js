@@ -8,6 +8,7 @@ import SignIn from '../Pages/SignIn/SignIn';
 import Categories from '../Pages/Home/ProuductsSection/ShowCategories/Categories/Categories';
 import ProductDetails from '../Pages/Home/ProuductsSection/ProductDetails/ProductDetails';
 import CheckOut from '../CheckOut/CheckOut';
+import Dashboard from '../Layouts/Dashboard/Dashboard';
 
 export const routes = createBrowserRouter([
     {
@@ -41,6 +42,15 @@ export const routes = createBrowserRouter([
             {
                 path: '/checkout',
                 element: <CheckOut></CheckOut>
+            }
+        ]
+    },
+    {
+        path:'/dashboard',
+        element: <Dashboard></Dashboard>,
+        children:[
+            {
+
             }
         ]
     }

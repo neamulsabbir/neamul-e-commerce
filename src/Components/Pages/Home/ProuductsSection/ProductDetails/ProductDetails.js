@@ -28,7 +28,7 @@ const ProductDetails = () => {
         (item) => item.slug === slug
       )
     );
-  }, [slug, cartItems]);
+  }, [slug,cartItems,dispatch]);
 
   return (
     <div className="w-11/12 mx-auto">

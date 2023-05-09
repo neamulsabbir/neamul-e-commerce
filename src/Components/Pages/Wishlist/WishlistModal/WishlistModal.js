@@ -24,8 +24,8 @@ const WishlistModal = () => {
             Your Favourite Product!
           </h3>
           <div className="grid grid-cols-2 gap-5">
-            {wishlistProducts.map((pd) => (
-              <div style={{
+            {wishlistProducts.map((pd,i) => (
+              <div key={i} style={{
                 boxShadow: "rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px"
               }} className=" bg-white rounded-md shadow-md p-2">
                 <img className="rounded-t-md" src={pd?.image} alt="" />

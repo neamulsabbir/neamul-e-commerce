@@ -47,8 +47,8 @@ const Product = ({ pd }) => {
         modules={[FreeMode, Pagination]}
         className="mySwiper"
       >
-        {pd?.products?.map((product) => (
-          <SwiperSlide>
+        {pd?.products.slice(0,6).map((product,i) => (
+          <SwiperSlide key={i}>
             <CarouselProduct pd={product}></CarouselProduct>
           </SwiperSlide>
         ))}

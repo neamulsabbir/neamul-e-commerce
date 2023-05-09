@@ -4,10 +4,12 @@ import {
   CLOSE_SIDEBAR,
   DELETE_PRODUCT_FROM_CART,
   GET_CATEGORIES_PRODUCT,
+  GET_COLOR_CATEGORY,
   GET_PRODUCT,
   GET_PRODUCT_DETAIL,
   OPEN_SIDEBAR,
   REMOVE_FROM_CART,
+  SEND_PRODUCT_COLOR,
 } from "../ActionTypes/ActionTypes";
 
 export const getProduct = (data) => {
@@ -30,6 +32,19 @@ export const getCategoriesProduct = (data) => {
     payload: data,
   };
 };
+export const getColorCategoryData = (data) => {
+  return {
+    type: GET_COLOR_CATEGORY,
+    payload: data,
+  };
+};
+
+export const sendProductColor = data => {
+  return{
+    type: SEND_PRODUCT_COLOR,
+    payload: data
+  }
+}
 
 export const addToCart = (data) => {
   return {

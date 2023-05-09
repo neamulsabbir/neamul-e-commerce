@@ -38,7 +38,7 @@ const Banner = () => {
       >
         <div className="w-11/12 mx-auto">
           {banners.map((banner) => (
-            <SwiperSlide>
+            <SwiperSlide key={banner?.id}>
               <img src={banner?.img} alt="" />
             </SwiperSlide>
           ))}

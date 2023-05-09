@@ -1,3 +1,0 @@
-const initialState = {
-    toggle : false
-}
