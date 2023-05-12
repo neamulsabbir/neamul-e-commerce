@@ -11,7 +11,7 @@ const Categories = () => {
 
   const dispatch = useDispatch()
   const products = useSelector(state => state.categoriesProduct.categoriesProduct)
-  const filterProducts = useSelector(state => state.categoriesProduct.filterColor)
+  const filterColor = useSelector(state => state.categoriesProduct.filterColor)
   
   let datas
   for(const product of products){
@@ -28,7 +28,7 @@ const Categories = () => {
       <div className="w-11/12 mx-auto my-12 lg:my-20 lg:flex lg:justify-between">
         <FilterProduct product={datas}></FilterProduct>
         {
-          filterProducts.length <= 0 ?
+          filterColor.length <= 0 ?
           <div 
           className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-7 lg:ml-16">
           {
@@ -39,7 +39,7 @@ const Categories = () => {
         <div 
           className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-7 lg:ml-16">
           {
-            filterProducts[0]?.map((item,i) => <Category key={i} pd={item}></Category>)
+            filterColor[0]?.map((item,i) => <Category key={i} pd={item}></Category>)
           }
         </div>
         }

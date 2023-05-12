@@ -9,6 +9,8 @@ import Categories from '../Pages/Home/ProuductsSection/ShowCategories/Categories
 import ProductDetails from '../Pages/Home/ProuductsSection/ProductDetails/ProductDetails';
 import CheckOut from '../CheckOut/CheckOut';
 import Dashboard from '../Layouts/Dashboard/Dashboard';
+import ProductList from '../Pages/Dashboard/ProductLists/ProductLists';
+import AddProduct from '../Pages/Dashboard/AddProduct/AddProduct';
 
 export const routes = createBrowserRouter([
     {
@@ -50,7 +52,12 @@ export const routes = createBrowserRouter([
         element: <Dashboard></Dashboard>,
         children:[
             {
-
+                path: "/dashboard/product-list",
+                element: <ProductList />
+            },
+            {
+                path: '/dashboard/add-product/:id',
+                element: <AddProduct />
             }
         ]
     }

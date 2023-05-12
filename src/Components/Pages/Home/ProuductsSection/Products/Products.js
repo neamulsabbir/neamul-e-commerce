@@ -4,7 +4,7 @@ import { getProductData } from '../../../../../State/Thunk/getProductData';
 import Product from '../Product/Product';
 
 const Products = () => {
-    // const [products, setProducts] = useState([])
+    
     const products = useSelector(state => state.product.products)
     const dispatch = useDispatch()
 

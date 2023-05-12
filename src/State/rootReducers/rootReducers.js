@@ -5,6 +5,7 @@ import { productDetailsReducer } from "../Reducers/productDetailReducer";
 import { productCartReducer } from "../Reducers/productCartReducer";
 import { sidebarReducer } from "../Reducers/sidebarReducer";
 import { colorsProductReducer } from "../Reducers/colorsProductReducer";
+import { dashboardProductReducer } from "../Reducers/dashboardProductReducer";
 
 export const rootReducers = combineReducers({
     product: productReducer,
@@ -13,4 +14,5 @@ export const rootReducers = combineReducers({
     colors : colorsProductReducer,
     cart: productCartReducer,
     sidebar: sidebarReducer,
+    dashboardProduct : dashboardProductReducer,
 });

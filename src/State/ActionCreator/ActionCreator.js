@@ -2,6 +2,7 @@ import {
   ADD_TO_CART,
   ADD_WISH_LIST,
   CLOSE_SIDEBAR,
+  DASHBOARD_PRODUCT,
   DELETE_PRODUCT_FROM_CART,
   GET_CATEGORIES_PRODUCT,
   GET_COLOR_CATEGORY,
@@ -83,3 +84,10 @@ export const closeSidebar = () => {
     type: CLOSE_SIDEBAR,
   };
 };
+
+export const getDashboardProductData = data => {
+  return{
+    type: DASHBOARD_PRODUCT,
+    payload: data
+  }
+}

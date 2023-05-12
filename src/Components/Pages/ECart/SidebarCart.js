@@ -15,7 +15,7 @@ const SidebarCart = () => {
         height: "100vh",
         boxShadow: "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px"
       }}
-      className={`absolute duration-1000 bg-white p-4 overflow-auto grid grid-cols content-between
+      className={`absolute duration-1000 bg-white p-4 overflow-auto grid grid-cols content-between w-[241.188px]
       ${
         isOpen ? "left-0 top-0 " : "left-[-1000px] top-0"
       }`}
