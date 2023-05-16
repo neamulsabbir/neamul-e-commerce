@@ -3,10 +3,10 @@ import { FaHome } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { closeSidebar, openSidebar } from "../../../State/ActionCreator/ActionCreator";
-import SidebarCart from "../../Pages/ECart/SidebarCart";
 import WishlistIcon from "../../Icons/WishlistIcon";
 import CartIcon from "../../Icons/CartIcon";
 import ProfileIcon from "../../Icons/ProfileIcon";
+import SidebarCart from "../../Pages/SidebarCart/SidebarCart";
 
 const BottomNavbar = () => {
   const isOpen = useSelector(state => state.sidebar.isOpen)

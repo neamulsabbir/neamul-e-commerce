@@ -14,7 +14,7 @@ const AddProduct = () => {
   const imageHostKey = process.env.REACT_APP_imagebb_key;
   // console.log(imageHost)
   // console.log(product);
-  console.log(imageFile);
+  // console.log(imageFile);
 
   useEffect(() => {
     dispatch(getDashboardProduct(id))
@@ -44,7 +44,7 @@ const AddProduct = () => {
         const price = form.price.value;
         const regularPrice = form.regularPrice.value;
         const slug = form.slug.value;
-        const image = imgData?.data?.url;
+        const image = imgData?.data?.display_url;
         let data = {
           title,color,price,regularPrice,slug,image
         } 
@@ -98,7 +98,7 @@ const AddProduct = () => {
         />
       </div>
       <div className="flex items-center mb-5">
-        <h1 className="w-52 font-semibold">Product rowor</h1>
+        <h1 className="w-52 font-semibold">Product Color</h1>
         <input
           className="border-2 border-gray-200  rounded-md p-2 w-full"
           type="text"
@@ -145,7 +145,7 @@ const AddProduct = () => {
           required
         />
       </div>
-      <input className="bg-black px-3 py-1 rounded-md text-white" type="submit" value="Add Product"/>
+      <input className="bg-black px-3 py-1 rounded-md text-white cursor-pointer" type="submit" value="Add Product"/>
     </form>
     </div>
   );

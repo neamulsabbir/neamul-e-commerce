@@ -7,10 +7,10 @@ import {
 import { FaHome } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import WishlistIcon from "../../../Icons/WishlistIcon";
-import WishlistModal from "../../../Pages/Wishlist/WishlistModal/WishlistModal";
 import CartIcon from "../../../Icons/CartIcon";
-import SidebarCart from "../../../Pages/ECart/SidebarCart";
 import ProfileIcon from "../../../Icons/ProfileIcon";
+import WishlistModal from "../../../Pages/Main/Wishlist/WishlistModal/WishlistModal";
+import SidebarCart from "../../../Pages/SidebarCart/SidebarCart";
 
 const NavbarIcon = () => {
   const isOpen = useSelector((state) => state.sidebar.isOpen);

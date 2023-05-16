@@ -18,48 +18,6 @@
       "slug":"Red-color-check-shirt-00002",
       "price":"550",
       "color":"Black"
-    },
-    {
-      "image":"https://i.ibb.co/7GMG6G4/3.jpg",
-      "title":"Mens Tshirt",
-      "percentage":"10% off",
-      "regularPrice":"750",
-      "slug":"Mens-tshirt-00003",
-      "price":"550",
-      "color":"Ash"
-    },
-    {
-      "image":"https://i.ibb.co/HNVXY1D/4.jpg",
-      "title":"Red Tshirt",
-      "percentage":"10% off",
-      "slug":"Red-tshirt-00004",
-      "price":"550",
-      "color":"Red"
-    },
-    {
-      "image":"https://i.ibb.co/7SLLLR8/5.jpg",
-      "title":"Print Half Sleeve Shirt",
-      "percentage":"10% off",
-      "regularPrice":"750",
-      "slug":"Print-half-sleeve-shirt-00005",
-      "price":"550",
-      "color":"Green"
-    },
-    {
-      "image":"https://i.ibb.co/7GMG6G4/3.jpg",
-      "title":"Print Full Sleeve Shirt",
-      "percentage":"10% off",
-      "regularPrice":"750",
-      "slug":"Print-full-sleeve-shirt-00006",
-      "price":"550",
-      "color":"Ash"
-    },
-    {
-      "image":"https://i.ibb.co/tsZW6Sm/1.jpg",
-      "title":"Formal White Shir White",
-      "slug":"Formal-White-Shir-White-00007",
-      "price":"650",
-      "color":"White"
     }
   ]
 }
