@@ -2,27 +2,19 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getDashboardProduct } from "../../../../State/Thunk/getDashboardProduct";
-import { Toaster, toast } from "react-hot-toast";
+import { toast } from "react-hot-toast";
 
 const AddProduct = () => {
   const [imageFile, setImageFile] = useState(null)
   const dispatch = useDispatch()
   const {id} = useParams()
-  
 
   const product = useSelector(state => state.dashboardProduct.product)
   const imageHostKey = process.env.REACT_APP_imagebb_key;
-  // console.log(imageHost)
-  // console.log(product);
-  // console.log(imageFile);
 
   useEffect(() => {
     dispatch(getDashboardProduct(id))
   },[dispatch,id])
-
-  const handleFileChange = event  => {
-    setImageFile(event.target.files[0])
-  }
 
   const handleAddProduct = event => {
     event.preventDefault()
@@ -36,7 +28,7 @@ const AddProduct = () => {
     })
     .then(res => res.json())
     .then(imgData => {
-      console.log(imgData);
+      // console.log(imgData);
       if(imgData.success  ){
         const form = event.target;
         const title = form.title.value;
@@ -141,7 +133,7 @@ const AddProduct = () => {
         <input
           className="border-2 border-gray-200  rounded-md p-2 w-full"
           type="file"
-          onChange = {handleFileChange}
+          onChange = {(event) => setImageFile(event.target.files[0])}
           required
         />
       </div>

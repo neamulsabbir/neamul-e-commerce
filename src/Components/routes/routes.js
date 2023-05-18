@@ -12,6 +12,7 @@ import CheckOut from '../Pages/CheckOut/CheckOut';
 import Categories from '../Pages/Main/Home/ProuductsSection/Categories/Categories';
 import ProductDetails from '../Pages/Main/Home/ProuductsSection/ProductDetails/ProductDetails';
 import DashboardProducts from '../Pages/Dashboard/DashboardProducts/DashboardProducts';
+import CategoryItemEdit from '../Pages/Dashboard/DashboardProducts/DashboardProduct/CategoryItemEdit/CategoryItemEdit';
 
 export const routes = createBrowserRouter([
     {
@@ -53,8 +54,8 @@ export const routes = createBrowserRouter([
         element: <Dashboard></Dashboard>,
         children:[
             {
-                path: "/dashboard/product-list",
-                element: <DashboardProducts />
+                path: "/dashboard",
+                element: <DashboardProducts></DashboardProducts>
             },
             {
                 path: '/dashboard/add-product/:id',
@@ -63,6 +64,10 @@ export const routes = createBrowserRouter([
             {
                 path: '/dashboard/edit-product/:id',
                 element: <EditProduct />
+            },
+            {
+                path: '/dashboard/category-item-edit/:id',
+                element: <CategoryItemEdit />
             }
         ]
     }
