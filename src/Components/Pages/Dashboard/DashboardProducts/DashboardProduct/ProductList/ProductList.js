@@ -27,14 +27,15 @@ const ProductList = ({ pd, setDisplayProduct, displayProduct }) => {
   return (
     <div className=" p-2 rounded-md border-2 border-gray-200">
       <img className="w-44 rounded-sm" src={pd?.image} alt="" />
-      <h1 className="mt-2">
+      <h1 className="mt-1">
         {pd?.title.length > 10 ? pd?.title.slice(0, 15) + "..." : pd?.title}
       </h1>
       <h1>Color: {pd?.color}</h1>
-      <div className="flex justify-between text-lg">
+      <div className="flex justify-between text-lg mt-2">
         <Link to={`/dashboard/edit-product/${pd?.id}`}>
           <FaEdit className="cursor-pointer" />
         </Link>
+        <div className="border-x"></div>
         <FaTrashAlt
           onClick={() => handleDeleteProduct(pd)}
           className="text-red-500 cursor-pointer"

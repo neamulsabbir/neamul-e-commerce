@@ -4,15 +4,19 @@ import Main from '../Layouts/Main/Main';
 import Cart from '../Pages/Main/Cart/Cart';
 import Home from '../Pages/Main/Home/Home';
 import Dashboard from '../Layouts/Dashboard/Dashboard';
-import AddProduct from '../Pages/Dashboard/AddProduct/AddProduct';
-import EditProduct from '../Pages/Dashboard/EditProduct/EditProduct';
 import SignUp from '../Pages/Main/SignUp/SignUp';
 import SignIn from '../Pages/Main/SignIn/SignIn';
-import CheckOut from '../Pages/CheckOut/CheckOut';
 import Categories from '../Pages/Main/Home/ProuductsSection/Categories/Categories';
 import ProductDetails from '../Pages/Main/Home/ProuductsSection/ProductDetails/ProductDetails';
 import DashboardProducts from '../Pages/Dashboard/DashboardProducts/DashboardProducts';
 import CategoryItemEdit from '../Pages/Dashboard/DashboardProducts/DashboardProduct/CategoryItemEdit/CategoryItemEdit';
+import DashboardProductsColors from '../Pages/Dashboard/DashboardProductsColors/DashboardProductsColors';
+import CategoryName from '../Pages/Dashboard/CategoryName/CategoryName';
+import CreateNewCategory from '../Pages/Dashboard/CreateNewCategory/CreateNewCategory';
+import AddColor from '../Pages/Dashboard/DashboardProductsColors/AddColor/AddColor';
+import AddProduct from '../Pages/Dashboard/DashboardProducts/AddProduct/AddProduct';
+import EditProduct from '../Pages/Dashboard/DashboardProducts/EditProduct/EditProduct';
+import CheckOut from '../Pages/Main/CheckOut/CheckOut';
 
 export const routes = createBrowserRouter([
     {
@@ -62,12 +66,28 @@ export const routes = createBrowserRouter([
                 element: <AddProduct />
             },
             {
+                path: '/dashboard/create-category',
+                element: <CreateNewCategory />
+            },
+            {
                 path: '/dashboard/edit-product/:id',
                 element: <EditProduct />
             },
             {
                 path: '/dashboard/category-item-edit/:id',
                 element: <CategoryItemEdit />
+            },
+            {
+                path:'/dashboard/product-color',
+                element: <DashboardProductsColors />
+            },
+            {
+                path: '/dashboard/category-name',
+                element: <CategoryName />
+            },
+            {
+                path: '/dashboard/add-color',
+                element: <AddColor/>
             }
         ]
     }

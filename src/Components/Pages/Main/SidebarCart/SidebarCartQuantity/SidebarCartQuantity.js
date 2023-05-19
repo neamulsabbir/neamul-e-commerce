@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { addToCart, removeFromCart } from '../../../../State/ActionCreator/ActionCreator';
+import { addToCart, removeFromCart } from '../../../../../State/ActionCreator/ActionCreator';
 
 const SidebarCartQuantity = ({cart}) => {
     const dispatch = useDispatch()

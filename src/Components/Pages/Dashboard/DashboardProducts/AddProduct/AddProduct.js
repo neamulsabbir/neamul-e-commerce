@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { getDashboardProduct } from "../../../../State/Thunk/getDashboardProduct";
+import { getDashboardProduct } from "../../../../../State/Thunk/getDashboardProduct";
 import { toast } from "react-hot-toast";
 
 const AddProduct = () => {

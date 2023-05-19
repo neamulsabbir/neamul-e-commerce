@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "../../../Images/banner3.png";
+import banner from "../../../../Images/banner3.png";
 import OrderDetails from "./OrderDetails/OrderDetails";
 import BillingDetails from "./BillingDetails/BillingDetails";
 

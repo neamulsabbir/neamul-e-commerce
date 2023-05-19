@@ -6,7 +6,7 @@ import { closeSidebar, openSidebar } from "../../../State/ActionCreator/ActionCr
 import WishlistIcon from "../../Icons/WishlistIcon";
 import CartIcon from "../../Icons/CartIcon";
 import ProfileIcon from "../../Icons/ProfileIcon";
-import SidebarCart from "../../Pages/SidebarCart/SidebarCart";
+import SidebarCart from "../../Pages/Main/SidebarCart/SidebarCart";
 
 const BottomNavbar = () => {
   const isOpen = useSelector(state => state.sidebar.isOpen)

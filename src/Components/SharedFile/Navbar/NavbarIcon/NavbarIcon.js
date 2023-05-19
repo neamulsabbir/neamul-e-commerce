@@ -10,7 +10,7 @@ import WishlistIcon from "../../../Icons/WishlistIcon";
 import CartIcon from "../../../Icons/CartIcon";
 import ProfileIcon from "../../../Icons/ProfileIcon";
 import WishlistModal from "../../../Pages/Main/Wishlist/WishlistModal/WishlistModal";
-import SidebarCart from "../../../Pages/SidebarCart/SidebarCart";
+import SidebarCart from "../../../Pages/Main/SidebarCart/SidebarCart";
 
 const NavbarIcon = () => {
   const isOpen = useSelector((state) => state.sidebar.isOpen);

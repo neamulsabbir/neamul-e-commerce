@@ -3,8 +3,8 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import banner from "../../../../Images/banner3.png";
 import CartTotal from "./CartTotal/CartTotal";
-import SidebarCartPrice from "../../SidebarCart/SidebarCartPrice/SidebarCartPrice";
-import SidebarCartQuantity from "../../SidebarCart/SidebarCartQuantity/SidebarCartQuantity";
+import SidebarCartPrice from "../SidebarCart/SidebarCartPrice/SidebarCartPrice";
+import SidebarCartQuantity from "../SidebarCart/SidebarCartQuantity/SidebarCartQuantity";
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cart);

@@ -23,13 +23,11 @@ const CategoryItemDelete = ({ product }) => {
   };
 
   return (
-    <div className="mt-1 text-white  flex justify-end">
-      <div className="flex items-center text-sm cursor-pointer bg-red-500 px-2 py-1 rounded-md ">
-        <h1 className="mr-2" onClick={() => handleDeleteCategory(product)}>
-          Delete <span className="font-bold">{product?.items}</span>
-        </h1>
-        <FaTrashAlt />
-      </div>
+    <div className="flex items-center text-xs cursor-pointer bg-red-500 px-2 py-[6px] rounded-md text-white ml-4">
+      <h1 className="mr-2" onClick={() => handleDeleteCategory(product)}>
+        Delete <span className="font-bold">{product?.items}</span>
+      </h1>
+      <FaTrashAlt />
     </div>
   );
 };

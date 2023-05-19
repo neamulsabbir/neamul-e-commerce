@@ -73,7 +73,7 @@ const CategoryItemEdit = () => {
             name="items"
             placeholder="Product title"
             defaultValue={filterProduct?.items}
-            // required
+            required
           />
         </div>
         <div className="flex items-center mb-5">
@@ -84,7 +84,7 @@ const CategoryItemEdit = () => {
             name="category"
             placeholder="Product color"
             defaultValue={filterProduct?.category}
-            // required
+            required
           />
         </div>
         <div className="flex items-center mb-5">
@@ -93,7 +93,7 @@ const CategoryItemEdit = () => {
             className="border-2 border-gray-200  rounded-md p-2 w-full"
             type="file"
             onChange = {(event) => setImageFile(event.target.files[0])}
-            // required
+            required
           />
         </div>
         <input

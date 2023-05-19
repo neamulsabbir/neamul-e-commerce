@@ -11,7 +11,7 @@ const DashboardProducts = () => {
         dispatch(getProductData())
     },[dispatch])
     return (
-        <div className='px-4'>
+        <div className='p-5'>
             {
                 products.map((product,i) => <DashboardProduct product={product} key={i} />)
             }
