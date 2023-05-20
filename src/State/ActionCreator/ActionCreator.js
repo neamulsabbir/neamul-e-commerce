@@ -1,6 +1,8 @@
 import {
   ADD_TO_CART,
   ADD_WISH_LIST,
+  CLEAR_FILTER_ITEM,
+  CLEAR_FROM_CART,
   CLOSE_SIDEBAR,
   DASHBOARD_PRODUCT,
   DELETE_PRODUCT_FROM_CART,
@@ -10,6 +12,7 @@ import {
   GET_PRODUCT_DETAIL,
   OPEN_SIDEBAR,
   REMOVE_FROM_CART,
+  REMOVE_FROM_WISHLIST,
   SEND_PRODUCT_COLOR,
 } from "../ActionTypes/ActionTypes";
 
@@ -59,6 +62,12 @@ export const removeFromCart = (data) => {
     payload: data,
   };
 };
+export const clearFromCart = (data) => {
+  return {
+    type: CLEAR_FROM_CART,
+    payload: data,
+  };
+};
 
 export const deleteFromCart = (data) => {
   return {
@@ -70,6 +79,12 @@ export const deleteFromCart = (data) => {
 export const addToWishList = (data) => {
   return {
     type: ADD_WISH_LIST,
+    payload: data,
+  };
+};
+export const removeToWishList = (data) => {
+  return {
+    type: REMOVE_FROM_WISHLIST,
     payload: data,
   };
 };
@@ -88,6 +103,13 @@ export const closeSidebar = () => {
 export const getDashboardProductData = data => {
   return{
     type: DASHBOARD_PRODUCT,
+    payload: data
+  }
+}
+
+export const clearFilterItem = data => {
+  return{
+    type: CLEAR_FILTER_ITEM,
     payload: data
   }
 }

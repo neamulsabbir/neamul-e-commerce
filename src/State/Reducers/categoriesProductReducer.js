@@ -1,4 +1,5 @@
 import {
+  CLEAR_FILTER_ITEM,
   GET_CATEGORIES_PRODUCT,
   SEND_PRODUCT_COLOR,
 } from "../ActionTypes/ActionTypes";
@@ -10,6 +11,7 @@ const initialState = {
 
 export const categoriesProductReducer = (state = initialState, action) => {
   switch (action.type) {
+
     case GET_CATEGORIES_PRODUCT:
       return {
         ...state,
@@ -29,6 +31,12 @@ export const categoriesProductReducer = (state = initialState, action) => {
         ...state,
         filterColor: product,
       };
+
+    case CLEAR_FILTER_ITEM:
+      return{
+        ...state,
+        filterColor: []
+      }
 
     default:
       return state;

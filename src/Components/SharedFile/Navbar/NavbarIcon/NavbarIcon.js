@@ -6,7 +6,7 @@ import {
 } from "../../../../State/ActionCreator/ActionCreator";
 import { FaHome } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import WishlistIcon from "../../../Icons/WishlistIcon";
+import WishlistIcon from "../../../Icons/BlackWishlistIcon";
 import CartIcon from "../../../Icons/CartIcon";
 import ProfileIcon from "../../../Icons/ProfileIcon";
 import WishlistModal from "../../../Pages/Main/Wishlist/WishlistModal/WishlistModal";
@@ -31,13 +31,13 @@ const NavbarIcon = () => {
           <FaHome className="text-2xl"></FaHome>
         </Link>
 
-        <div className="mr-8">
-          <label htmlFor="wishlist-product">
+        <div className="mr-8 ">
+          <label htmlFor="wishlist-product"  className="cursor-pointer">
             <WishlistIcon />
           </label>
           <WishlistModal />
         </div>
-        <div onClick={handleSidebar} className="mr-8">
+        <div onClick={handleSidebar} className="mr-8 cursor-pointer">
           <CartIcon />
           <SidebarCart />
         </div>

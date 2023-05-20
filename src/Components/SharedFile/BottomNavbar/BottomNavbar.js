@@ -3,7 +3,7 @@ import { FaHome } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { closeSidebar, openSidebar } from "../../../State/ActionCreator/ActionCreator";
-import WishlistIcon from "../../Icons/WishlistIcon";
+import BlackWishlistIcon from "../../Icons/BlackWishlistIcon";
 import CartIcon from "../../Icons/CartIcon";
 import ProfileIcon from "../../Icons/ProfileIcon";
 import SidebarCart from "../../Pages/Main/SidebarCart/SidebarCart";
@@ -32,7 +32,7 @@ const BottomNavbar = () => {
         </Link>
         <div>
           <Link to="/wishlist" className="flex flex-col items-center">
-          <WishlistIcon />
+          <BlackWishlistIcon />
             <h1 className="text-sm font-semibold">Wishlist</h1>
           </Link>
         </div>

@@ -4,10 +4,10 @@ const SidebarCartPrice = ({ cart }) => {
   // console.log(cart);
 
   return (
-    <div className="mt-2">
+    <div className="my-2">
       {cart?.regularPrice ? (
-        <div className="h-11">
-          <h1 className="font-semibold text-sm ">
+        <div className="h-8">
+          <h1 className="font-semibold text-xs ">
             BDT {cart?.price}
           </h1>
           <div className="flex">
@@ -22,7 +22,7 @@ const SidebarCartPrice = ({ cart }) => {
           </div>
         </div>
       ) : (
-        <h1 className="font-semibold text-sm h-11">
+        <h1 className="font-semibold text-xs">
           BDT {cart?.price}
         </h1>
       )}

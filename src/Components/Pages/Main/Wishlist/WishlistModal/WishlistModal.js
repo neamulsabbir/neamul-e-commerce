@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import WishlistPrice from "../WishlistPrice/WishlistPrice";
 import { addToCart } from "../../../../../State/ActionCreator/ActionCreator";
@@ -8,7 +8,7 @@ const WishlistModal = () => {
   const dispatch = useDispatch();
   const wishlistProducts = useSelector((state) => state.cart.wishlist);
   const products = useSelector((state) => state.productDetails.product);
-
+  
   return (
     <div>
       <input type="checkbox" id="wishlist-product" className="modal-toggle" />

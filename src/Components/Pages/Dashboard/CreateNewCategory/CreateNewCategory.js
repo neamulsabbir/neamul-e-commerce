@@ -142,6 +142,7 @@ const CreateNewCategory = () => {
           />
         </div>
       </form>
+      
     </div>
   );
 };
